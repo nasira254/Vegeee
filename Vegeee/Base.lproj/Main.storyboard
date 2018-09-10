@@ -119,7 +119,7 @@
         <!--Registration-->
         <scene sceneID="tbA-OE-XpH">
             <objects>
-                <viewController title="Registration" id="Hlm-kq-Ff4" sceneMemberID="viewController">
+                <viewController title="Registration" id="Hlm-kq-Ff4" customClass="RegisterViewController" customModule="Vegeee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ccB-0y-evm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -199,15 +199,22 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerButtonPressed:" destination="Hlm-kq-Ff4" eventType="touchUpInside" id="u6L-P9-5es"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="j1a-Av-IIc"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="fqc-Hb-JzW" id="oOt-lu-mIr"/>
+                        <outlet property="passwordTextField" destination="hXJ-Kr-c34" id="fT9-lw-xRz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tL6-CM-85t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2260.8695652173915" y="89.673913043478265"/>
+            <point key="canvasLocation" x="2287" y="90"/>
         </scene>
     </scenes>
 </document>
