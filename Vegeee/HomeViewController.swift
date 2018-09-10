@@ -18,8 +18,21 @@ class HomeViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
+        
     }
 
 
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "goToLogin", sender: self)
+        
+    }
+    
+    @IBAction func registerButtonPressed(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "goToRegistration", sender: self)
+    }
+    
 }
 
