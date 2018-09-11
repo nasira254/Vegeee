@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +24,23 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
+        
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+            
+            if error != nil {
+                print(error!)
+            }else {
+                //success
+                print("Successfully loged in")
+                //add self. at begining as you're in closure
+                self.performSegue(withIdentifier: "goToItems", sender: self)
+        }
+      
+            
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kk4-qf-TbP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dcb-3u-edY">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -64,13 +64,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="Rus-Dy-yBP" userLabel="Home"/>
                     <connections>
-                        <segue destination="lOU-Ty-UBO" kind="show" identifier="goToLogin" id="HDr-dn-STa"/>
-                        <segue destination="Hlm-kq-Ff4" kind="show" identifier="goToRegistration" id="cAF-Ok-6er"/>
+                        <segue destination="Hlm-kq-Ff4" kind="show" identifier="goToRegistration" id="kvs-Yt-zdU"/>
+                        <segue destination="lOU-Ty-UBO" kind="show" identifier="goToLogin" id="nG3-xL-crt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3123.1884057971015" y="89.673913043478265"/>
+            <point key="canvasLocation" x="4797.1014492753629" y="89.673913043478265"/>
         </scene>
         <!--Login-->
         <scene sceneID="YBc-GT-iKZ">
@@ -93,7 +93,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="5r6-4n-J8t" kind="show" id="jT6-aQ-9F7"/>
+                                    <action selector="loginButtonPressed:" destination="lOU-Ty-UBO" eventType="touchUpInside" id="LBs-XU-XCP"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N28-Xn-vOY">
@@ -114,16 +114,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="nWv-LL-occ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Items" id="KSr-gz-Z03" userLabel="Items"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="N28-Xn-vOY" id="nyH-m3-3Rb"/>
+                        <outlet property="passwordTextField" destination="ReG-01-krR" id="Sou-l3-Xfc"/>
+                        <segue destination="5r6-4n-J8t" kind="show" identifier="goToItems" id="47r-0h-wwX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5J-dw-IqL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3937" y="549"/>
+            <point key="canvasLocation" x="5750.7246376811599" y="548.64130434782612"/>
         </scene>
         <!--Items-->
         <scene sceneID="AWC-hL-JHO">
             <objects>
-                <tableViewController title="Items" id="5r6-4n-J8t" sceneMemberID="viewController">
+                <tableViewController title="Items" id="5r6-4n-J8t" customClass="ItemsViewController" customModule="Vegeee" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VfI-4X-CNx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,11 +148,25 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Items" id="iCv-ve-dwo" userLabel="Items">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="9Kp-RR-tAL">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="5r6-4n-J8t" id="eCl-5Y-x1T"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Log out" id="MdV-0y-TMW">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="logOutButtonPressed:" destination="5r6-4n-J8t" id="WSH-9F-ps0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S0r-bF-typ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4775" y="90"/>
+            <point key="canvasLocation" x="6588.4057971014499" y="89.673913043478265"/>
         </scene>
         <!--Registration-->
         <scene sceneID="tbA-OE-XpH">
@@ -235,46 +253,43 @@
                                 </state>
                                 <connections>
                                     <action selector="registerButtonPressed:" destination="Hlm-kq-Ff4" eventType="touchUpInside" id="u6L-P9-5es"/>
-                                    <segue destination="5r6-4n-J8t" kind="show" identifier="goToItemList" id="nL3-d2-d2s"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="j1a-Av-IIc"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Register" id="KSr-gz-Z03" userLabel="Register"/>
                     <connections>
                         <outlet property="emailTextField" destination="fqc-Hb-JzW" id="oOt-lu-mIr"/>
                         <outlet property="passwordTextField" destination="hXJ-Kr-c34" id="fT9-lw-xRz"/>
+                        <segue destination="5r6-4n-J8t" kind="show" identifier="goToItems" id="3Pw-Hj-EWW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tL6-CM-85t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3937" y="-399"/>
+            <point key="canvasLocation" x="5750.7246376811599" y="-399.45652173913044"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="YBj-ud-Vp4">
+        <scene sceneID="f2c-Un-xG4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="55i-qb-4kk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kk4-qf-TbP" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dcb-3u-edY" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BWZ-BI-sio">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h4F-EL-JwV">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.84465640779999995" green="0.51457053419999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xnt-LZ-Vxh"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iLl-JS-Udd"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dn1-eM-mNH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2174" y="90"/>
+            <point key="canvasLocation" x="3889.8550724637685" y="89.673913043478265"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="jT6-aQ-9F7"/>
+        <segue reference="47r-0h-wwX"/>
     </inferredMetricsTieBreakers>
 </document>

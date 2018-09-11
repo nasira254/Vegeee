@@ -39,7 +39,8 @@ class RegisterViewController: UIViewController {
             }else {
                 //success
                 print("Registration Success")
-                
+                //add self. at begining as you're in closure
+                self.performSegue(withIdentifier: "goToItems", sender: self)
                 
             }
         }
