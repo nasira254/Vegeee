@@ -150,13 +150,13 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Items" id="iCv-ve-dwo" userLabel="Items">
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="9Kp-RR-tAL">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" red="0.84465640779999995" green="0.51457053419999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="addButtonPressed:" destination="5r6-4n-J8t" id="eCl-5Y-x1T"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Log out" id="MdV-0y-TMW">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" red="0.84465640779999995" green="0.51457053419999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="logOutButtonPressed:" destination="5r6-4n-J8t" id="WSH-9F-ps0"/>
                             </connections>
@@ -290,6 +290,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="47r-0h-wwX"/>
+        <segue reference="3Pw-Hj-EWW"/>
     </inferredMetricsTieBreakers>
 </document>
