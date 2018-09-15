@@ -11,8 +11,13 @@ import Firebase
 
 
 class RegisterViewController: UIViewController {
-
     
+    var refBusiness: DatabaseReference!
+    
+    
+    @IBOutlet weak var businessTextField: UITextField!
+    
+    @IBOutlet weak var firstlineAddreesTextfield: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -22,16 +27,26 @@ class RegisterViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        refBusiness = Database.database().reference().child("Business");
         
     }
 
+    func addBusiness(){
+        let key = refBusiness.childByAutoId().key
+        let business = ["id": key,
+                        "businessName": businessTextField.text! as String,
+                        "firstLineOfAddress": firstlineAddreesTextfield.text! as String]
+        refBusiness.child(key).setValue(business)
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-        
+        addBusiness()
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
             
             if error != nil {

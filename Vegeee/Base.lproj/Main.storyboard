@@ -261,7 +261,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Register" id="KSr-gz-Z03" userLabel="Register"/>
                     <connections>
+                        <outlet property="businessTextField" destination="UmU-df-mzG" id="6xu-0o-UMe"/>
                         <outlet property="emailTextField" destination="fqc-Hb-JzW" id="oOt-lu-mIr"/>
+                        <outlet property="firstlineAddreesTextfield" destination="0ev-qC-hfu" id="c1u-J2-ApB"/>
                         <outlet property="passwordTextField" destination="hXJ-Kr-c34" id="fT9-lw-xRz"/>
                         <segue destination="5r6-4n-J8t" kind="show" identifier="goToItems" id="3Pw-Hj-EWW"/>
                     </connections>
