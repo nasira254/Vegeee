@@ -18,6 +18,11 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var businessTextField: UITextField!
     
     @IBOutlet weak var firstlineAddreesTextfield: UITextField!
+    @IBOutlet weak var secondAddressTextField: UITextField!
+    @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var postcodeTextField: UITextField!
+    @IBOutlet weak var businessNumberTextField: UITextField!
+    @IBOutlet weak var businessMobileTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -35,7 +40,15 @@ class RegisterViewController: UIViewController {
         let key = refBusiness.childByAutoId().key
         let business = ["id": key,
                         "businessName": businessTextField.text! as String,
-                        "firstLineOfAddress": firstlineAddreesTextfield.text! as String]
+                        "firstLineOfAddress": firstlineAddreesTextfield.text! as String,
+                        "secondlineOfAddress": secondAddressTextField.text! as String,
+                        "city": cityTextField.text! as String,
+                        "postcode": postcodeTextField.text! as String,
+                        "businessPhone": businessNumberTextField.text! as String,
+                        "businessMobile": businessMobileTextField.text! as String,
+                        "email": emailTextField.text! as String,
+                        "password": passwordTextField.text! as String,]
+        
         refBusiness.child(key).setValue(business)
         
     }
