@@ -13,10 +13,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    var activeTextField : UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //for text field delegate
         emailTextField.delegate = self
         passwordTextField.delegate = self
         
@@ -36,9 +38,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
         
     }
+    //to hide keyboard following pressing enter button
+    func textFieldShouldReturn(_ textField: UITextField)-> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
     // Methods or functions
-    
     func hideKeyBooard(){
         emailTextField.resignFirstResponder()
         
@@ -88,15 +94,5 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
