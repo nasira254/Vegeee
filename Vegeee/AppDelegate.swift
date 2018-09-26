@@ -22,6 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let myDatabase = Database.database().reference()
         
         myDatabase.setValue("testttttttiiiiinnnngggg")
+        
+       // refItems.child(key).setValue(items)
+        
+        
         return true
     }
 

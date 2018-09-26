@@ -88,7 +88,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 //success
                 print("Successfully loged in")
                 //add self. at begining as you're in closure
-                self.performSegue(withIdentifier: "goToItems", sender: self)
+                self.performSegue(withIdentifier: "goToAdmin", sender: self)
         }
       
             

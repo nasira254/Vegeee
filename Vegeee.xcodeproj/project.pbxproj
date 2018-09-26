@@ -10,11 +10,15 @@
 		90D3270980D72889802F0AE2 /* Pods_Vegeee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED9E22CE20FCA918CD1F9C8 /* Pods_Vegeee.framework */; };
 		D2094EC9214822A000D0B652 /* CustomMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2094EC7214822A000D0B652 /* CustomMessageCell.swift */; };
 		D2094ECA214822A000D0B652 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2094EC8214822A000D0B652 /* CustomCell.xib */; };
+		D214C5FD215AF37800104426 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214C5FC215AF37800104426 /* AdminViewController.swift */; };
+		D214C5FF215AFAC500104426 /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214C5FE215AFAC500104426 /* ViewControllerTableViewCell.swift */; };
+		D214C601215AFF5400104426 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D214C600215AFF5400104426 /* ItemModel.swift */; };
 		D24A71472146872A0089266E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24A71462146872A0089266E /* AppDelegate.swift */; };
 		D24A71492146872A0089266E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24A71482146872A0089266E /* HomeViewController.swift */; };
 		D24A714C2146872A0089266E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24A714A2146872A0089266E /* Main.storyboard */; };
 		D24A714E2146872C0089266E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D24A714D2146872C0089266E /* Assets.xcassets */; };
 		D24A71512146872C0089266E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24A714F2146872C0089266E /* LaunchScreen.storyboard */; };
+		D26E8171215666830036BEEF /* Firebaseimage.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D26E8170215666830036BEEF /* Firebaseimage.jpeg */; };
 		D29A97872146EED100B333D8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A97862146EED100B333D8 /* LoginViewController.swift */; };
 		D29A97892147070900B333D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D29A97882147070900B333D8 /* GoogleService-Info.plist */; };
 		D29A978B21470F1A00B333D8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A978A21470F1A00B333D8 /* RegisterViewController.swift */; };
@@ -27,6 +31,9 @@
 		BED9E22CE20FCA918CD1F9C8 /* Pods_Vegeee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vegeee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2094EC7214822A000D0B652 /* CustomMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageCell.swift; sourceTree = "<group>"; };
 		D2094EC8214822A000D0B652 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		D214C5FC215AF37800104426 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AdminViewController.swift; path = /Users/nasirali/Desktop/Vegeee/Vegeee/AdminViewController.swift; sourceTree = "<absolute>"; };
+		D214C5FE215AFAC500104426 /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
+		D214C600215AFF5400104426 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 		D24A71432146872A0089266E /* Vegeee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vegeee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D24A71462146872A0089266E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D24A71482146872A0089266E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +41,7 @@
 		D24A714D2146872C0089266E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D24A71502146872C0089266E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D24A71522146872C0089266E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D26E8170215666830036BEEF /* Firebaseimage.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Firebaseimage.jpeg; sourceTree = "<group>"; };
 		D29A97862146EED100B333D8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D29A97882147070900B333D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D29A978A21470F1A00B333D8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +111,9 @@
 				D24A71462146872A0089266E /* AppDelegate.swift */,
 				D24A714A2146872A0089266E /* Main.storyboard */,
 				D24A714D2146872C0089266E /* Assets.xcassets */,
+				D214C5FE215AFAC500104426 /* ViewControllerTableViewCell.swift */,
+				D214C600215AFF5400104426 /* ItemModel.swift */,
+				D214C5FC215AF37800104426 /* AdminViewController.swift */,
 				D24A71482146872A0089266E /* HomeViewController.swift */,
 				D29A97862146EED100B333D8 /* LoginViewController.swift */,
 				D29A978C2147C31800B333D8 /* ItemsViewController.swift */,
@@ -110,6 +121,7 @@
 				D24A714F2146872C0089266E /* LaunchScreen.storyboard */,
 				D24A71522146872C0089266E /* Info.plist */,
 				D29A97882147070900B333D8 /* GoogleService-Info.plist */,
+				D26E8170215666830036BEEF /* Firebaseimage.jpeg */,
 			);
 			path = Vegeee;
 			sourceTree = "<group>";
@@ -178,6 +190,7 @@
 				D2094ECA214822A000D0B652 /* CustomCell.xib in Resources */,
 				D29A97892147070900B333D8 /* GoogleService-Info.plist in Resources */,
 				D24A714E2146872C0089266E /* Assets.xcassets in Resources */,
+				D26E8171215666830036BEEF /* Firebaseimage.jpeg in Resources */,
 				D24A714C2146872A0089266E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,8 +253,11 @@
 			files = (
 				D29A978D2147C31800B333D8 /* ItemsViewController.swift in Sources */,
 				D29A97872146EED100B333D8 /* LoginViewController.swift in Sources */,
+				D214C5FF215AFAC500104426 /* ViewControllerTableViewCell.swift in Sources */,
+				D214C601215AFF5400104426 /* ItemModel.swift in Sources */,
 				D24A71492146872A0089266E /* HomeViewController.swift in Sources */,
 				D2094EC9214822A000D0B652 /* CustomMessageCell.swift in Sources */,
+				D214C5FD215AF37800104426 /* AdminViewController.swift in Sources */,
 				D24A71472146872A0089266E /* AppDelegate.swift in Sources */,
 				D29A978B21470F1A00B333D8 /* RegisterViewController.swift in Sources */,
 			);
