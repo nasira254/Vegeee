@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import Firebase
 
-class CustomMessageCell: UITableViewCell {
+class CustomItemCell: UITableViewCell {
 
-    @IBOutlet var messageBackground: UIView!
+    
+
     @IBOutlet var itemName: UILabel!
     @IBOutlet var itemPrice: UILabel!
+    
+    
     
     
     override func awakeFromNib() {

@@ -10,19 +10,55 @@ import UIKit
 import Firebase
 
 
-class ItemsViewController: UITableViewController {
+class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+    
+    @IBOutlet var itemTableView: UITableView!
+    @IBOutlet var heightConstraint: NSLayoutConstraint!
+    @IBOutlet var sendButton: UIButton!
+    @IBOutlet var messageTextfield: UITextField!
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        itemTableView.delegate = self
+        itemTableView.dataSource = self
+        
+        itemTableView.register(UINib(nibName: "ItemCell", bundle: nil), forCellReuseIdentifier: "customItemCell")
+        
+        configureTableView()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+
+    }
+   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customItemCell", for: indexPath) as! CustomItemCell
+
+        let itemArray = ["test1", "test2", "test3"]
+
+        cell.itemName.text = itemArray[indexPath.row]
+
+        return cell
+
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
     }
     
+    func configureTableView() {
+        
+        itemTableView.rowHeight = UITableViewAutomaticDimension
+        itemTableView.estimatedRowHeight = 120
+        
+    }
+  
     @IBAction func logOutButtonPressed(_ sender: UIBarButtonItem) {
         
         do {
@@ -41,24 +77,8 @@ class ItemsViewController: UITableViewController {
                 print("no view controllers to pop off")
                 return
         }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    }
-    
-//MARK - Add new items
-    
-    
-    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-        
-        
-    }
-    
 }
+}
+
+
+
