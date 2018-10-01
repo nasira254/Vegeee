@@ -25,10 +25,16 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Do any additional setup after loading the view.
         itemTableView.delegate = self
         itemTableView.dataSource = self
+        messageTextfield.delegate = self
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tableViewTapped))
+        
+        itemTableView.addGestureRecognizer(tapGesture)
         
         itemTableView.register(UINib(nibName: "ItemCell", bundle: nil), forCellReuseIdentifier: "customItemCell")
         
         configureTableView()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,7 +46,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "customItemCell", for: indexPath) as! CustomItemCell
 
-        let itemArray = ["test1", "test2", "test3"]
+        let itemArray = ["tesjh", "test2", "test3"]
 
         cell.itemName.text = itemArray[indexPath.row]
 
@@ -52,10 +58,34 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return 3
     }
     
+    @objc func tableViewTapped(){
+        
+        messageTextfield.endEditing(true)
+    }
+    
+    
     func configureTableView() {
         
         itemTableView.rowHeight = UITableViewAutomaticDimension
         itemTableView.estimatedRowHeight = 120
+        
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+      
+        UIView.animate(withDuration: 0.5) {
+            self.heightConstraint.constant = 308
+            self.view.layoutIfNeeded()
+        }
+        
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        UIView.animate(withDuration: 0.5) {
+            self.heightConstraint.constant = 50
+            self.view.layoutIfNeeded()
+        }
         
     }
   
